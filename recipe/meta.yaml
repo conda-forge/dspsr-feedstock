@@ -17,7 +17,7 @@ source:
         - test_romberg.patch
         
 build:
-    number: 0
+    number: 1
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
