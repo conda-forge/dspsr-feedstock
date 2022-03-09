@@ -15,9 +15,10 @@ source:
         - python_ldflags.patch
         - shell_for_flags.patch
         - test_romberg.patch
+        - py310_configure.patch
         
 build:
-    number: 1
+    number: 2
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
