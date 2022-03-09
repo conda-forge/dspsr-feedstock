@@ -15,6 +15,7 @@ source:
         - python_ldflags.patch
         - shell_for_flags.patch
         - test_romberg.patch
+        - py310_configure.patch
         
 build:
     number: 1
