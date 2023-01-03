@@ -18,7 +18,7 @@ source:
         - py310_configure.patch
         
 build:
-    number: 4
+    number: 5
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
