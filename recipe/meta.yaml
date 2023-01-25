@@ -1,6 +1,6 @@
 {% set name = "dspsr" %}
-{% set version = "2022-02-17" %}
-{% set sha256 = "835246c81d78f25b4620cbabf50dfa7ac3a7c1e3145046102a3bb8a54bc5e57b" %}
+{% set version = "2023-01-25" %}
+{% set sha256 = "8a683aa60530140766609bcd400041f10294acdae58682b4b76eb6d929f1388c" %}
 
 package:
     name: "{{ name | lower }}"
@@ -12,13 +12,10 @@ source:
     patches:
         - macos_fmemopen.patch  # [osx]
         - dmsmear.patch  # [osx]
-        - python_ldflags.patch
         - shell_for_flags.patch
-        - test_romberg.patch
-        - py310_configure.patch
         
 build:
-    number: 4
+    number: 0
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
@@ -32,6 +29,7 @@ requirements:
         - autoconf
         - automake
         - libtool
+        - pkg-config
         - swig  # [linux]
     host:
         - psrchive
