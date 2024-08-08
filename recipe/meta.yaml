@@ -15,7 +15,7 @@ source:
         - shell_for_flags.patch
         
 build:
-    number: 2
+    number: 3
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
@@ -24,6 +24,7 @@ requirements:
     build:
         - {{ compiler('cxx') }}
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - make
         - perl
         - autoconf
