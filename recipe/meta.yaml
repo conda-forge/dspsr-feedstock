@@ -1,6 +1,6 @@
 {% set name = "dspsr" %}
-{% set version = "2023-10-03" %}
-{% set sha256 = "afb046f596882a5c59d7bf2fe07abeb32b01f9674a71440af5a0987c9dc96794" %}
+{% set version = "2024-08-01" %}
+{% set sha256 = "7db30c9e8c95e496b83210275c178d54027f605bf0c29db43cb74a599e9563b5" %}
 
 package:
     name: "{{ name | lower }}"
@@ -15,7 +15,7 @@ source:
         - shell_for_flags.patch
         
 build:
-    number: 3
+    number: 0
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
