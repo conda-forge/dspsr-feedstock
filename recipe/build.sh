@@ -10,7 +10,7 @@ echo "asp fits guppi lwa sigproc vdif" > backends.list
 # Extra platform-specific configure options
 CONFIG_OPTS=""
 if [[ "${target_platform}" == osx-* ]]; then
-	CONFIG_OPTS="--disable-python --with-psrchive-dir=${RECIPE_DIR}"
+	CONFIG_OPTS="--disable-python"
 fi
 
 ./configure --prefix=${PREFIX} --disable-local --enable-shared ${CONFIG_OPTS} \

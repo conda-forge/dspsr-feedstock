@@ -10,6 +10,7 @@ source:
     url: https://sourceforge.net/projects/{{ name }}/files/{{ name }}/{{ version }}/{{ name }}-{{ version }}.tar.gz
     sha256: {{ sha256 }}
     patches:
+        - strip_emutls_w.patch  # [osx]
         - macos_fmemopen.patch  # [osx]
         - dmsmear.patch  # [osx]
         - shell_for_flags.patch
