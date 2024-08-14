@@ -1,0 +1,3 @@
+#! /bin/sh
+
+psrchive $@ | sed 's/-lemutls_w//'
