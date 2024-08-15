@@ -13,6 +13,7 @@ source:
         - strip_emutls_w.patch  # [osx]
         - macos_fmemopen.patch  # [osx]
         - dmsmear.patch  # [osx]
+        - test_util.patch
         - shell_for_flags.patch
         
 build:
