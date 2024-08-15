@@ -6,6 +6,6 @@
  host_triplet = @host@
 -bin_PROGRAMS = dmsmear$(EXEEXT) digitxt$(EXEEXT) digimon$(EXEEXT) \
 +bin_PROGRAMS = digitxt$(EXEEXT) digimon$(EXEEXT) \
- 	digihist$(EXEEXT) filterbank_speed$(EXEEXT) \
- 	fix_dspsr_K_bug$(EXEEXT) $(am__EXEEXT_1) $(am__EXEEXT_2) \
- 	$(am__EXEEXT_3) $(am__EXEEXT_4) $(am__EXEEXT_5) \
+ 	digihist$(EXEEXT) digidada$(EXEEXT) digislice$(EXEEXT) \
+ 	filterbank_speed$(EXEEXT) fix_dspsr_K_bug$(EXEEXT) \
+ 	$(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
