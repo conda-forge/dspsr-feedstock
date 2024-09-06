@@ -1,0 +1,38 @@
+diff --git a/python/dspsr.i b/python/dspsr.i
+index 89dd5973..faef3d26 100644
+--- a/python/dspsr.i
++++ b/python/dspsr.i
+@@ -135,6 +135,7 @@ void pointer_tracker_remove(Reference::Able *ptr) {
+ 
+ // Header files included here will be wrapped
+ %include "ReferenceAble.h"
++%include "dsp/Operation.h"
+ %include "dsp/Transformation.h"
+ 
+ %template(TransformationTimeSeriesTimeSeries) dsp::Transformation<dsp::TimeSeries, dsp::TimeSeries>;
+@@ -142,11 +143,14 @@ template class dsp::Transformation<dsp::TimeSeries, dsp::TimeSeries>;
+ 
+ 
+ %include "dsp/Input.h"
+-%include "dsp/Operation.h"
+ %include "dsp/Observation.h"
+ %include "dsp/DataSeries.h"
++%include "dsp/Source.h"
++%include "dsp/InputSource.h"
++%template(InputSourceInput) dsp::InputSource<Input>;
++%include "dsp/UnpackerSource.h"
++%template(UnpackerSourceInput) dsp::UnpackerSource<Unpacker,Input>;
+ %include "dsp/IOManager.h"
+-%include "dsp/Input.h"
+ %include "dsp/BitSeries.h"
+ %include "dsp/TimeSeries.h"
+ // Detection::Engine is screwing this up...
+@@ -156,6 +160,8 @@ template class dsp::Transformation<dsp::TimeSeries, dsp::TimeSeries>;
+ /* %include "dsp/InverseFilterbank.h" */
+ %include "dsp/Convolution.h"
+ 
++using namespace dsp;
++
+ // Python-specific extensions to the classes:
+ %extend dsp::TimeSeries
+ {

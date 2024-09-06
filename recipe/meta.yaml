@@ -15,9 +15,10 @@ source:
         - dmsmear.patch  # [osx]
         - test_util.patch
         - shell_for_flags.patch
+        - python_iomanager.patch
         
 build:
-    number: 0
+    number: 1
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
@@ -48,6 +49,10 @@ requirements:
         - {{ pin_compatible('numpy') }}  # [linux]
 
 test:
+    imports:
+        - dspsr  # [linux]
+    files:
+        - test/test_python.py  # [linux]
     commands:
         - digifil -h
         - digifits -h
@@ -74,8 +79,7 @@ test:
         - test -f $PREFIX/lib/libdspsr$SHLIB_EXT
         - test -f $PREFIX/lib/libdspstats$SHLIB_EXT
         - test -f $PREFIX/include/dspsr/dsp/dsp.h
-    imports:
-        - dspsr  # [linux]
+        - python test/test_python.py  # [linux]
 
 about:
     home: http://dspsr.sourceforge.net/
