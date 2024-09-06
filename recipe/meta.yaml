@@ -49,6 +49,10 @@ requirements:
         - {{ pin_compatible('numpy') }}  # [linux]
 
 test:
+    imports:
+        - dspsr  # [linux]
+    files:
+        - test/test_python.py  # [linux]
     commands:
         - digifil -h
         - digifits -h
@@ -75,8 +79,7 @@ test:
         - test -f $PREFIX/lib/libdspsr$SHLIB_EXT
         - test -f $PREFIX/lib/libdspstats$SHLIB_EXT
         - test -f $PREFIX/include/dspsr/dsp/dsp.h
-    imports:
-        - dspsr  # [linux]
+        - python test/test_python.py  # [linux]
 
 about:
     home: http://dspsr.sourceforge.net/
