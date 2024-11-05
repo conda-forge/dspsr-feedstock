@@ -18,7 +18,7 @@ source:
         - python_iomanager.patch
         
 build:
-    number: 1
+    number: 2
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
@@ -46,7 +46,6 @@ requirements:
         - cfitsio
         - {{ pin_compatible('pgplot') }}
         - python  # [linux]
-        - {{ pin_compatible('numpy') }}  # [linux]
 
 test:
     imports:
