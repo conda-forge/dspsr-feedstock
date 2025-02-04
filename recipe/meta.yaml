@@ -1,6 +1,6 @@
 {% set name = "dspsr" %}
-{% set version = "2024-08-01" %}
-{% set sha256 = "7db30c9e8c95e496b83210275c178d54027f605bf0c29db43cb74a599e9563b5" %}
+{% set version = "2025-02-03" %}
+{% set sha256 = "e4c54ce91092b42c3cc54cf6046abaa5c7e5595b67ccf469e5111da5cde62c9b" %}
 
 package:
     name: "{{ name | lower }}"
@@ -13,12 +13,10 @@ source:
         - strip_emutls_w.patch  # [osx]
         - macos_fmemopen.patch  # [osx]
         - dmsmear.patch  # [osx]
-        - test_util.patch
         - shell_for_flags.patch
-        - python_iomanager.patch
         
 build:
-    number: 1
+    number: 0
     skip: true  # [win or (python_impl == 'pypy')]
     run_exports:
       - {{ pin_subpackage('dspsr', exact=True) }}
