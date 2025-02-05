@@ -1,5 +1,5 @@
---- a/Makefile.in	2025-02-05 11:36:51.172862849 -0700
-+++ b/Makefile.in	2025-02-05 11:37:10.217299607 -0700
+--- a/Signal/General/Makefile.in	2025-02-05 11:36:51.172862849 -0700
++++ b/Signal/General/Makefile.in	2025-02-05 11:37:10.217299607 -0700
 @@ -104,7 +104,7 @@
  POST_UNINSTALL = :
  build_triplet = @build@
