@@ -1,11 +1,11 @@
---- a/Signal/General/Makefile.in
-+++ a/Signal/General/Makefile.in
-@@ -102,7 +102,7 @@
+--- a/Makefile.in	2025-02-05 11:36:51.172862849 -0700
++++ b/Makefile.in	2025-02-05 11:37:10.217299607 -0700
+@@ -104,7 +104,7 @@
  POST_UNINSTALL = :
  build_triplet = @build@
  host_triplet = @host@
--bin_PROGRAMS = dmsmear$(EXEEXT) digitxt$(EXEEXT) digimon$(EXEEXT) \
-+bin_PROGRAMS = digitxt$(EXEEXT) digimon$(EXEEXT) \
- 	digihist$(EXEEXT) digidada$(EXEEXT) digislice$(EXEEXT) \
- 	filterbank_speed$(EXEEXT) fix_dspsr_K_bug$(EXEEXT) \
- 	$(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
+-bin_PROGRAMS = dmsmear$(EXEEXT) digidiff$(EXEEXT) digitxt$(EXEEXT) \
++bin_PROGRAMS = digidiff$(EXEEXT) digitxt$(EXEEXT) \
+ 	digimon$(EXEEXT) digihist$(EXEEXT) digidada$(EXEEXT) \
+ 	digislice$(EXEEXT) filterbank_speed$(EXEEXT) \
+ 	fix_dspsr_K_bug$(EXEEXT) $(am__EXEEXT_1) $(am__EXEEXT_2) \

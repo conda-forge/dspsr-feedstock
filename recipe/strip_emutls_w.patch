@@ -1,11 +1,11 @@
---- a/configure	2024-09-06 14:49:51.819932779 -0600
-+++ b/configure	2024-09-06 14:53:31.953143126 -0600
+--- a/configure	2025-02-05 11:32:29.762843979 -0700
++++ b/configure	2025-02-05 11:34:15.299281721 -0700
 @@ -3538,7 +3538,7 @@
    ac_status=$?
    printf "%s\n" "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
--  pkg_cv_PSRCHIVE_LIBS=`$PKG_CONFIG --libs "psrchive >= 2024-07-25 " 2>/dev/null`
-+  pkg_cv_PSRCHIVE_LIBS=`$PKG_CONFIG --libs "psrchive >= 2024-07-25 " | sed 's/-lemutls_w//' 2>/dev/null`
+-  pkg_cv_PSRCHIVE_LIBS=`$PKG_CONFIG --libs "psrchive >= 2025-02-03 " 2>/dev/null`
++  pkg_cv_PSRCHIVE_LIBS=`$PKG_CONFIG --libs "psrchive >= 2025-02-03 " | sed 's/-lemutls_w//' 2>/dev/null`
  		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
